@@ -1,0 +1,16 @@
+<?php
+
+use Bloom\Kernel\Database\Migration;
+use Bloom\Kernel\Database\Table;
+
+return new class implements Migration {
+    public static function up(): void
+    {
+        // TODO: Implement up() method.
+    }
+
+    public static function down(): void
+    {
+        // TODO: Implement down() method.
+    }
+};

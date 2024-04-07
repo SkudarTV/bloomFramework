@@ -1,0 +1,17 @@
+{
+    "name": "skudartv/bloomframework",
+    "type": "library",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Bloom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lukas OTERO--MELEDO",
+            "email": "lukas@projectheberg.com"
+        }
+    ],
+    "require": {}
+}

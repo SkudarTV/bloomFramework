@@ -6,7 +6,7 @@ use Closure;
 
 class Table
 {
-    use TableColumn;
+    use Column;
     private string $name;
     private function __construct(string $name)
     {

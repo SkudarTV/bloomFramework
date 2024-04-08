@@ -11,7 +11,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
  * @throws \Twig\Error\RuntimeError
  * @throws \Twig\Error\LoaderError
  */
-function view(string $viewName, array $parameters): void
+function view(string $viewName, array $parameters = []): void
 {
     $loader = new FilesystemLoader(App::dir().'/resources/views');
     $twig = new Environment($loader);

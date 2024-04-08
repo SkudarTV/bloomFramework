@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "Bloom\\": "src/"
-        }
+        },
+        "files": [
+            "src/Facades/facade.php"
+        ]
     },
     "authors": [
         {
@@ -20,5 +23,8 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "require": {
+        "twig/twig": "^3.0"
     }
 }

@@ -35,6 +35,11 @@ class Route
         return $this->url;
     }
 
+    public static function routes(): array
+    {
+        return self::$routes;
+    }
+
     public function run(): void
     {
         if($this->action instanceof Closure)

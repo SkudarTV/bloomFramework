@@ -4,6 +4,7 @@ namespace Bloom;
 
 use Bloom\Kernel\Console;
 use Bloom\Kernel\Provider;
+use Bloom\Kernel\Route;
 
 class App
 {
@@ -86,9 +87,8 @@ class App
     }
     public function handleRequest(): void
     {
-        global $argv;
-        print_r($argv);
+        $route = Route::getRoute($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 
-        echo $_SERVER['REQUEST_METHOD'];
+        $route->run();
     }
 }

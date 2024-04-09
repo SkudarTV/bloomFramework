@@ -89,6 +89,13 @@ class App
     {
         $route = Route::getRoute($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 
-        $route->run();
+        if($route)
+        {
+            $route->run();
+        }
+        else {
+            http_response_code(404);
+            die();
+        }
     }
 }

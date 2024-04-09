@@ -56,7 +56,7 @@ class Route
         self::$routes[] = new self(Route::POST, $url, $action);
     }
 
-    public static function getRoute($method, $uri): Route
+    public static function getRoute($method, $uri): ?Route
     {
         $methodRoutes = array_filter(self::$routes, fn(Route $route) => $route->method() === $method);
         $route = array_filter($methodRoutes, fn(Route $route) => $route->uri() === $uri);

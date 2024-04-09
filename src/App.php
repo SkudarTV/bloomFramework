@@ -73,4 +73,22 @@ class App
     {
         return self::$dir;
     }
+    public function setRouting(...$routes): self
+    {
+        foreach ($routes as $route)
+        {
+            if(file_exists(self::dir() . $route))
+            {
+                require self::dir() . $route;
+            }
+        }
+        return $this;
+    }
+    public function handleRequest(): void
+    {
+        global $argv;
+        print_r($argv);
+
+        echo $_SERVER['REQUEST_METHOD'];
+    }
 }

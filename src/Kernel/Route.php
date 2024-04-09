@@ -58,6 +58,7 @@ class Route
 
     public static function getRoute($method, $uri): ?Route
     {
+        var_dump($method, $uri);
         $methodRoutes = array_filter(self::$routes, fn(Route $route) => $route->method() === $method);
         var_dump($methodRoutes);
         $route = array_filter($methodRoutes, fn(Route $route) => $route->uri() === $uri);
